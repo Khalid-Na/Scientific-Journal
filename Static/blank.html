@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %} {% load i18n %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title> {% block title %}Scientific Journal{% endblock title %} </title>
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href={% static './assets/vendors/mdi/css/materialdesignicons.min.css' %} />
+    <link rel="stylesheet" href={% static './assets/vendors/aos/dist/aos.css/aos.css' %} />
+    <link rel="stylesheet" href={% static './assets/vendors/owl.carousel/dist/assets/owl.carousel.min.css' %} />
+    <link rel="stylesheet" href={% static './assets/vendors/owl.carousel/dist/assets/owl.theme.default.min.css' %} />
+    <!-- End plugin css for this page -->
+    <link rel="shortcut icon" href={% static 'assets/images/favicon.png' %} />
+    <!-- inject:css -->
+    <link rel="stylesheet" href={% static 'assets/css/style.css' %}>
+    <link rel="stylesheet" href={% static 'assets/css/contactUs.css' %}>
+    <link rel="stylesheet" href={% static 'assets/css/navbar.css' %}>
+    <!-- endinject -->
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="main-panel">
+    
+            <header id="header">
+                <div class="container">
+                    <!-- partial:partials/_navbar.html -->
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="d-flex justify-content-between align-items-center navbar-top">
+                            <ul class="navbar-left">
+                                {% comment %} <li>Wed, March 4, 2020</li>
+                                <li>30°C,London</li> {% endcomment %}
+                            </ul>
+                            <div>
+                                <a class="navbar-brand" href="#"><img src={% static 'assets/images/logo.svg' %} alt="" /></a>
+                            </div>
+                            <div class="d-flex">
+                                <ul class="navbar-right">
+                                    <li>
+                                        <a href="#">ENGLISH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FRENCH</a>
+                                    </li>
+                                </ul>
+                                <ul class="social-media">
+                                    {% if user.is_authenticated %}
+                                    <li> {% trans 'Hi' %} , {{ user.first_name }}.</li>
+                                    <li><a class="btn btn-dark" href={% url 'accounts:logout' %}><button type="button" class="btn btn-dark">{% trans 'Logout' %}</button>  </a></li>
+                                </ul>
+
+
+                                {% else %}
+                                <ul class="social-media">
+                                    <li> <a class="btn btn-dark" href= {% url 'accounts:login' %}> <button type="button" class="btn btn-dark">{% trans 'Login' %}</button> </a> </li>
+                                    <li> <a class="btn btn-dark" href={% url 'accounts:user_signup' %}><button type="button" class="btn btn-dark">{% trans 'Register' %}</button> </a> </li>
+                                </ul>
+                                {% endif %} 
+                            </div>
+                        </div>
+                        <div class="navbar-bottom-menu">
+                            <button class="navbar-toggler" type="button" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                            <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
+                                    <li>
+                                        <button class="navbar-close">
+                        <i class="mdi mdi-close"></i>
+                      </button>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link active" href={% url 'home' %}>Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="pages/world.html">Trending</a>
+                                    </li>
+                                 
+      <li class="nav-item">     
+      <div class="dropdown">
+  <button class="dropbtn">Journals</button>
+  <div class="dropdown-content">
+    <a  href={% url 'journals:about_journal' %}>About the journal</a>
+    <a  href={% url 'journals:auth_guide' %}>Author Guidelines</a>
+    <a  href="#">Link 3</a>
+  </div>
+</div> </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href={% url 'accounts:contactus' %} >Contact_Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href={% url 'accounts:aboutus' %}>About_US</a>
+                                    </li>
+                                    <li class="nav-item"> </li>
+                                    <li class="nav-item"> </li>
+                                    <li class="nav-item"> </li>
+                                    <li class="nav-item"> </li>
+                                    {% if user.is_author == False  %}
+                                  <li><a href= {% url 'accounts:author_signup' user.id %} /><button type="button" class="btn btn-warning" >Apply as author</button></a> </li>
+                                  <li class="nav-item"></li>
+                                  {% elif user.is_authenticated  %}
+                                  <li><a href= {% url 'dashboards:author' %} /><button type="button" class="btn btn-warning" >Author Dashboard</button></a> </li>
+                                  <li class="nav-item"></li>
+                                    {% endif %}
+
+                    
+                                    {% if  user.is_reviewer == False  %}
+                                  <li><a href= {% url 'accounts:reviewer_signup' user.id %} /><button type="button" class="btn btn-warning" >Apply as reviewer</button></a> </li>
+                                        {% elif  user.is_authenticated  %}
+                                        <li><a href= {% url 'dashboards:author' %} /><button type="button" class="btn btn-warning" >Reviewer Dashboard</button></a> </li>
+                                  <li class="nav-item"></li>
+                                    {% endif %}
+                                  
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="mdi mdi-magnify"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- partial -->
+                </div>
+            </header>
+        
+        <!-- container-scroller ends -->
+{% block body %}
+
+
+{% endblock body %}
+
+
+
+
+
+        <!-- partial:partials/_footer.html -->
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="border-top"></div>
+              </div>
+              <div class="col-sm-3 col-lg-3">
+                <ul class="footer-vertical-nav">
+                  <li class="menu-title"><a href="pages/news-post.html">News</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pages/world.html">World</a></li>
+                            <li><a href="pages/author.html">Magazine</a></li>
+                            <li><a href="pages/business.html">Business</a></li>
+                            <li><a href="pages/politics.html">Politics</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-lg-3">
+                            <ul class="footer-vertical-nav">
+                                <li class="menu-title"><a href="pages/world.html">World</a></li>
+                                <li><a href="pages/sports.html">Sports</a></li>
+                                <li><a href="pages/art.html">Art</a></li>
+                                <li><a href="#">Magazine</a></li>
+                                <li><a href="pages/real-estate.html">Real estate</a></li>
+                                <li><a href="pages/travel.html">Travel</a></li>
+                                <li><a href="pages/author.html">Author</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-lg-3">
+                            <ul class="footer-vertical-nav">
+                                <li class="menu-title"><a href="#">Features</a></li>
+                                <li><a href="#">Photography</a></li>
+                                <li><a href="#">Video</a></li>
+                                <li><a href="pages/news-post.html">Newsletters</a></li>
+                                <li><a href="#">Live Events</a></li>
+                                <li><a href="#">Stores</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-lg-3">
+                            <ul class="footer-vertical-nav">
+                                <li class="menu-title"><a href="#">More</a></li>
+                                <li><a href="#">RSS</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">User Agreement</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="pages/aboutus.html">About us</a></li>
+                                <li><a href="pages/contactus.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="d-lg-flex justify-content-between align-items-center border-top mt-5 footer-bottom">
+                                <ul class="footer-horizontal-menu">
+                                    <li><a href="#">Terms of Use.</a></li>
+                                    <li><a href="#">Privacy Policy.</a></li>
+                                    <li><a href="#">Accessibility & CC.</a></li>
+                                    <li><a href="#">AdChoices.</a></li>
+                                    <li><a href="#">Advertise with us Transcripts.</a></li>
+                                    <li><a href="#">License.</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                </ul>
+                                <p class="font-weight-medium">
+                                    © 2020 , Inc.All Rights Reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </footer>
+
+                <!-- partial -->
+            </div>
+        </div>
+        <!-- inject:js -->
+        <script src={% static 'assets/vendors/js/vendor.bundle.base.js' %}></script>
+        <!-- endinject -->
+        <!-- plugin js for this page -->
+        <script src={% static './assets/vendors/owl.carousel/dist/owl.carousel.min.js' %}></script>
+        <!-- End plugin js for this page -->
+        <!-- Custom js for this page-->
+        <script src={ % static './assets/js/demo.js' %}></script>
+        <!-- End custom js for this page-->
+</body>
+
+</html>

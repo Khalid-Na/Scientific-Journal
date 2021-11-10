@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: admin@scientificjournal.com
+To: kh@ensah.ma
+Date: Sun, 02 Jun 2021 00:54:43 -0000
+Message-ID: <162536008358.6076.6187790898171535966@DESKTOP-6P8VCUT>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/ZjExNTQxMTQtM2MxOC00ZGRjLTljNjItZDQ4YWFkMWNiZWRh/ap8nz7-fb2e7a727c5297a85bd511dc4a40df7b/
+
+Your username, in case you’ve forgotten: kh@ensah.ma
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

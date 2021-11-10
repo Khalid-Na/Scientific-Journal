@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: admin@scientificjournal.com
+To: khalid.nazi@etu.uae.ac.ma
+Date: Sat, 17 Jul 2021 10:01:54 -0000
+Message-ID: <162651611409.5872.3843631887963808496@DESKTOP-6P8VCUT>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/NWRhOWFkYzMtOTgxMS00MTdjLWEwNmQtYjY2YmIyYWU4Y2Qy/apxfz6-0971b0edde78852e644e84bc355d6ae3/
+
+Your username, in case you’ve forgotten: khalid.nazi@etu.uae.ac.ma
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

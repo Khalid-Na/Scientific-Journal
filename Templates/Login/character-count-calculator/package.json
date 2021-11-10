@@ -1,0 +1,22 @@
+{
+  "name": "jquery-simple-txt-counter",
+  "version": "0.1.6",
+  "description": "jQuery Simple Text Counter",
+  "author": "Hugo Gomes <hugo.msn@msn.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugosbg/jquery-simple-txt-counter.git"
+  },
+  "keywords": [
+    "jquery",
+    "jquery textarea counter",
+    "jquery counter",
+    "textarea",
+    "counter"
+  ],
+  "bugs": {
+    "url": "https://github.com/hugosbg/jquery-simple-txt-counter/issues"
+  },
+  "homepage": "https://github.com/hugosbg/jquery-simple-txt-counter#readme"
+}

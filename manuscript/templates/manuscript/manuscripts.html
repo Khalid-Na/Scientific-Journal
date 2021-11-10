@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manuscripts</title>
+</head>
+<body>
+    <ul>
+        {% for book in book_list %}
+          <li>
+            <a href="{{ Manuscript.get_absolute_url }}">{{ Manuscript.title }}</a> ({{Manuscript.author}})
+          </li>
+        {% endfor %}
+      </ul>
+
+</body>
+</html>

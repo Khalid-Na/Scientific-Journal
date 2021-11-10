@@ -1,0 +1,52 @@
+{% extends 'blank.html' %} {% block title %} Contact Us {% endblock title %} {% block body %}
+
+<div class="contact">
+    <div class="contact-banner">
+        <div class="contact-title">Get in Touch</div>
+        <div class="contact-row">
+            <form method='POST' action='' >
+            {% csrf_token %}
+                <div class="contact-mail">
+                    <p>We want to assist you! For quick assistance with any specific queries or discussions, please feel free to contact us using the form below.</p>
+                    <div class="contact-row2">
+
+                        <div class="contact-row">
+                            <div class="contact-label">
+                                <p for="email">Email:</p>
+                                <input type="email" placeholder="Email" id="email" name="from_email" />
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <div class="contact-rowS">
+                        <div class="contact-label">
+                            <p for="Subject">Subject:</p>
+                            <input type="text" placeholder="Subject" name="subject" />
+                        </div>
+                    </div>
+                    <div class="contact-label1">
+                        <p for="name">Message:</p>
+                        <textarea id="message" placeholder="Put your message here" rows="5" cols="33" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Submit</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="contact-info border">
+        <h4>Contact Us</h4>
+        <p>École Nationale des Sciences Appliquées d'Al Hoceima</p>
+        <br/>
+        <p>Ctre Ait Youssef Ou Ali 32003</p>
+        <p>Al Hoceima, Morocco</p>
+        <p></p>
+        <h6>Email</h6>
+        <p>ENSAH@gmail.com</p>
+        <h6>Phone</h6>
+        <p>(+212) 6 24 36 15 06</p>
+    </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,59 @@
+{% extends './layout/formLayout.html' %} 
+
+{% load static %}
+{% load i18n %}
+{% block title %}Reviewer Signup Form{% endblock title %}
+{% block body %}
+
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+				<form  method = "POST" action ="" class="login100-form validate-form flex-sb flex-w"  enctype="multipart/form-data">
+					{% csrf_token %}
+					<span class="login100-form-title p-b-32">
+						Reviewer Signup
+					</span>
+
+					<span class="txt1 p-b-11">
+						Profession
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Profession is required">
+					   <input class="input100" type="text" name="profession" >
+						<span class="focus-input100"></span>
+					</div>
+				
+					<span class="txt1 p-b-11">
+						Domain of Research
+					</span>
+					<div class="wrap-input100 validate-input m-b-12" data-validate = "Laboratory affiliation is required">
+						 <input class="input100" type="text" name="domain_of_research" >
+
+					</div>
+
+					<span class="txt1 p-b-11">
+						Biography
+					</span>
+					<div class="wrap-input100 validate-input m-b-25" data-validate = "biography is required">
+			
+						 <input class="input1000" type="textarea" name="biography" placholder="Write a short biography" >
+						<span class="focus-input100"></span>
+					</div>
+					<span class="txt1 p-b-11">
+						Resume
+					</span>
+					<div class="wrap-input100 validate-input m-b-25" data-validate = "Resume is required">
+			
+						 <input class="input1000" type="file" name="resume" >
+						<span class="focus-input100"></span>
+					</div>
+                    
+
+                    	<div class="container-login100-form-btn">
+						<button class="login100-form-btn" type="submit">
+							Register
+						</button>
+					</div>
+
+                    </form>
+
+{% endblock body %}

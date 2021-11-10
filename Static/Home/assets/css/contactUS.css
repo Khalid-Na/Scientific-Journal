@@ -1,0 +1,131 @@
+/* *********************************************** */
+
+.contact {
+    display: flex;
+    margin-top: 40px;
+    color: black;
+    height: 550px;
+    margin-bottom: 0px !important;
+    /* width: 1000px; */
+    /* margin-left: 60px; */
+}
+
+.contact-title {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #fead33;
+    font-size: 65px;
+    font-weight: 300;
+    font-family: 'hacked';
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.contact-row {
+    display: flex;
+}
+
+.contact-row2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-mail {
+    /* position: relative; */
+    margin-left: 40px;
+    line-height: 40px;
+}
+
+.contact-label1 textarea {
+    height: 100px !important;
+    width: 600px !important;
+}
+
+.contact-mail input {
+    height: 30px;
+    width: 200px;
+}
+
+.contact-mail p {
+    font-family: 'verdana';
+    /* font-weight: 400; */
+    line-height: 40px;
+    font-weight: bold;
+}
+
+
+/* .contact-info p {
+    list-style: none;
+    font-family: 'verdana';
+    font-weight: 400;
+    line-height: 50px;
+    padding-left: 80px;
+    padding-right: 200px;
+} */
+
+.contact-banner {
+    max-width: 700px;
+    margin: -20px auto 0;
+    margin-bottom: 0px;
+    margin-left: 130px;
+    margin-right: 90px;
+}
+
+.contact-info {
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+    margin-left: -30px;
+    max-width: 300px;
+    /* padding-left: 20px !important; */
+    border-left: 2px solid #fead33;
+    padding-left: 10px;
+    padding-top: 25px;
+    margin-left: -10px;
+}
+
+.btn-secondary {
+    margin-left: 540px;
+    background-color: #fead33;
+    color: black;
+}
+
+.contact-rowS input {
+    height: 50px;
+}
+
+.contact-info h4 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.contact-info h6 {
+    font-size: 16px;
+    color: white;
+}
+
+.contact-info p {
+    margin-left: 10px !important;
+}
+
+.border {
+    background-color: #fead33;
+    margin-top: 115px;
+}
+
+.world-news,
+.popular-news {
+    padding: 37px 0;
+    margin-left: 80px !important;
+    margin-right: 80px !important;
+}
+
+.text-dark {
+    color: #fead33 !important;
+}
+
+.editors-news {
+    margin-top: 50px;
+}

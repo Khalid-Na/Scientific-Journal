@@ -1,0 +1,188 @@
+{% extends 'blank.html' %}{% load static %} {% load i18n %} {% block title %} Home {% endblock title %} {% block body %}
+<div class="world-news">
+    <!-- ***************************** -->
+    <div class="world-news">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="d-flex position-relative  float-left">
+                    <h3 class="section-title">JOURNALS</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                    <img src={% static 'assets/images/dashboard/journal1.jpg' %} class="img-fluid" alt="world-news" />
+                </div>
+                <h5 class="font-weight-bold mt-3">
+                    Computer science and Data structures
+                </h5>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                    <img src={% static 'assets/images/dashboard/journal2.jpg' %} class="img-fluid" alt="world-news" />
+                </div>
+                <h5 class="font-weight-bold mt-3">
+                    Journal of Teaching in physical Education
+                </h5>
+            </div>
+         
+            <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                    <img src={% static 'assets/images/dashboard/journal4.jpg' %} class="img-fluid" alt="world-news" />
+                </div>
+                <h5 class="font-weight-bold mt-3">
+                    science and technologie
+                </h5>
+            </div>
+               <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                    <img src={% static 'assets/images/dashboard/journal3.jpg' %} class="img-fluid" alt="world-news" />
+                </div>
+                <h5 class="font-weight-bold mt-3">
+                    Rural Mental Health
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- ***************************** -->
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="d-flex position-relative  float-left">
+                <h3 class="section-title">Lastest Articles</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-6 grid-margin mb-5 mb-sm-2">
+            <div class="position-relative image-hover">
+                <img src={% static 'assets/images/dashboard/iris.jpg' %} class="img-fluid" alt="world-news" />
+                <span class="thumb-title">TRAVEL</span>
+            </div>
+            <h5 class="font-weight-bold mt-3">
+                A New Texture Analysis Approach for Iris Recognition
+            </h5>
+            <p class="fs-15 font-weight-normal">
+                A New Texture Analysis Approach for Iris Recognition One of the most important authentication approaches is the iris recognition system (IRS), which is based on the iris of aperson for the authentication...
+            </p>
+            <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a>
+        </div>
+        <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
+            <div class="position-relative image-hover">
+                <img src={% static 'assets/images/dashboard/infrarouge.jpg' %} class="img-fluid" alt="world-news" />
+                <span class="thumb-title">NEWS</span>
+            </div>
+            <h5 class="font-weight-bold mt-3">
+                South Korea’s Moon Jae-in sworn in vowing address
+            </h5>
+            <p class="fs-15 font-weight-normal">
+                Universal Remote Control Systems for Domestic Devices Using Radio Frequency Waves...
+            </p>
+            <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a
+                >
+              </div>
+              <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                  <img
+                    src={% static 'assets/images/dashboard/deep.jpg' %}
+                    class="img-fluid"
+                    alt="world-news"
+                  />
+                  <span class="thumb-title">ART</span>
+                </div>
+                <h5 class="font-weight-bold mt-3">
+                  Hoc Networks
+                </h5>
+                <p class="fs-15 font-weight-normal">
+                  Deep convolutional recurrent model for region recommendation with spatial and temporal contexts...
+                </p>
+                <a href="#" class="font-weight-bold text-dark pt-2"
+                  >Read Article</a
+                >
+              </div>
+              <div class="col-lg-3 col-sm-6 mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                  <img
+                    src={% static 'assets/images/dashboard/CASE.jpg' %}
+                    class="img-fluid"
+                    alt="world-news"
+                  />
+                  <span class="thumb-title">BUSINESS</span>
+                </div>
+                <h5 class="font-weight-bold mt-3">
+                  Clinical Case Reports
+                </h5>
+                <p class="fs-15 font-weight-normal">
+                  A CASE of glucocorticoid hypersensitivity syndrome associated with underlying rubella virus infectionp...
+                </p>
+                <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a>
+        </div>
+    </div>
+
+    {% comment %} ************************************************************************************** {% endcomment %}
+    <div class="editors-news">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="d-flex position-relative float-left">
+                    <h3 class="section-title">Top Trending</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6  mb-5 mb-sm-2">
+                <div class="position-relative image-hover">
+                    <img src={% static 'assets/images/dashboard/covide.jpeg' %} class="img-fluid" alt="world-news" />
+                    <span class="thumb-title">NEWS</span>
+                </div>
+                <h1 class="font-weight-600 mt-3">
+                    COVID-19 Vaccines Work in People with Cancer: Study
+                </h1>
+                <p class="fs-15 font-weight-normal">
+                    Moderna’s, Pfizer’s, and Johnson & Johnson’s shots all offered protection against the virus regardless of cancer type, although slightly less so in people
+                </p>
+                <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a>
+
+            </div>
+            <div class="col-lg-6  mb-5 mb-sm-2">
+                <div class="row">
+                    <div class="col-sm-6  mb-5 mb-sm-2">
+                        <div class="position-relative image-hover">
+                            <img src={% static 'assets/images/dashboard/covide2.jpeg' %} class="img-fluid" alt="world-news" />
+                            <span class="thumb-title">health</span>
+                        </div>
+                        <h5 class="font-weight-600 mt-3">
+                            New Evidence Shows COVID-19 Was in US Weeks Before Thought
+                        </h5>
+                        <p class="fs-15 font-weight-normal">
+                            Some of the blood specimens collected in the United States for the NIH’s All of Us research program starting on January 2, 2020, have...
+                        </p>
+                        <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a>
+
+                    </div>
+                    <div class="col-sm-6  mb-5 mb-sm-2">
+                        <div class="position-relative image-hover">
+                            <img src={% static 'assets/images/dashboard/drug.jpeg' %} class="img-fluid" alt="world-news" />
+                            <span class="thumb-title">drug-development</span>
+                        </div>
+                        <h5 class="font-weight-600 mt-3">
+                            DEA Moves Toward Approving More Research Marijuana Growers
+                        </h5>
+                        <p class="fs-15 font-weight-normal">
+                            A regulatory change initiated during the Obama administration appears set to be put into practice, allowing more than one supplier of cannabis research products.
+                        </p>
+                        <a href="#" class="font-weight-bold text-dark pt-2">Read Article</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% comment %} **************************************************************************************** {% endcomment %} {% comment %} **************************************************************************************** {% endcomment %}
+
+</div>
+{% endblock body %}

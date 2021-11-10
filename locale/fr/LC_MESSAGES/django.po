@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-13 19:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\SCIENTIFICJOURNAL\settings.py:137
+msgid "English"
+msgstr "Anglais"
+
+#: .\SCIENTIFICJOURNAL\settings.py:138
+msgid "French"
+msgstr "Français"
+
+#: .\accounts\Templates\accounts\home.html:3
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: .\accounts\Templates\accounts\home.html:4
+msgid "logout"
+msgstr "Se déconnecter"
+
+#: .\accounts\Templates\accounts\home.html:5
+msgid "Author signup"
+msgstr ""
+
+#: .\accounts\Templates\accounts\home.html:9
+msgid "Welcome, new user. Please log in."
+msgstr "Bienvenue, nouvel utilisateur. Veuillez vous connecter"
+
+#: .\accounts\Templates\accounts\home.html:9
+msgid "login"
+msgstr "Se connecter"
+
+#: .\accounts\admin.py:11
+msgid "Personal info"
+msgstr ""
+
+#: .\accounts\admin.py:12
+msgid "Permissions"
+msgstr ""
+
+#: .\accounts\admin.py:15
+msgid "Important dates"
+msgstr ""
+
+#: .\accounts\models.py:55
+msgid "user"
+msgstr ""
+
+#: .\accounts\models.py:56
+msgid "users"
+msgstr ""
+
+#: .\accounts\models.py:98 .\accounts\models.py:108 .\accounts\models.py:115
+#: .\accounts\models.py:122
+msgid "Profession"
+msgstr ""
+
+#: .\accounts\models.py:99
+msgid "Institution"
+msgstr "Institut"
+
+#: .\accounts\models.py:100
+msgid "Domain of Interest"
+msgstr ""
+
+#: .\accounts\models.py:101
+msgid "Laboratory Affiliation"
+msgstr ""
+
+#: .\accounts\models.py:102 .\accounts\models.py:110 .\accounts\models.py:117
+#: .\accounts\models.py:124
+msgid "Short biography"
+msgstr ""
+
+#: .\accounts\models.py:109 .\accounts\models.py:116 .\accounts\models.py:123
+msgid "Domain of Research"
+msgstr ""
+
+#: .\accounts\models.py:111 .\accounts\models.py:118
+msgid "Resume"
+msgstr ""
+
+#: .\accounts\models.py:129
+msgid "Affiliation"
+msgstr ""

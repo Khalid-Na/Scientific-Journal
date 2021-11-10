@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load i18n %}
+<head>
+	<title>{% block title %}Submit Paper{% endblock title %}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href=  {% static 'images/icons/favicon.ico' %}/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href= {% static 'vendor/bootstrap/css/bootstrap.min.css' %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href= {% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static 'vendor/animate/animate.css' %}>
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href={% static 'vendor/css-hamburgers/hamburgers.min.css' %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static 'vendor/animsition/css/animsition.min.css' %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href={% static 'vendor/select2/select2.min.css' %}>
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href= {% static 'vendor/daterangepicker/daterangepicker.css' %}>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href= {% static 'css/util.css' %}>
+	<link rel="stylesheet" type="text/css" href= {% static 'css/main.css' %}>
+<!--===============================================================================================-->
+</head>
+<body>
+    <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+				<form  method = "POST" action ="" enctype ="multipart/form-data" class="login100-form validate-form flex-sb flex-w"  >
+					{% csrf_token %}
+					<span class="login100-form-title p-b-32">
+						Paper Submission
+					</span>
+
+					<span class="txt1 p-b-11">
+						Paper Title
+					</span>
+					<div style="color:red;">{% if messages %}
+						<ul class="messages" >
+							{% for message in messages %}
+							<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+								{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+								{{ message }}
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					   </div>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Title is required">
+					   <input class="input100" type="text" name="Title" >	
+					   <span class="focus-input100"></span>
+					</div>
+					
+					<span class="txt1 p-b-11">
+						Paper Abstract
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Abstract is required">
+					   <input class="input1000" type="textarea" name="Manu_abstract" >	
+					   <span class="focus-input100"></span>
+					</div>
+					
+					<span class="txt1 p-b-11">
+						Paper Category
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Category is required">
+					   <input class="input100" type="text" name="manuscript_category" >	
+					   <span class="focus-input100"></span>
+					</div>	
+                    
+                    <span class="txt1 p-b-11">
+						Upload Paper
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Category is required">
+					   <input class="input10" type="file" name="file" >	
+					   <span class="focus-input100"></span>
+					</div>	
+					   <span class="txt1 p-b-11">
+						Keywords
+					</span>
+					<div class="wrap-input100 validate-input m-b-36" data-validate = "Category is required">
+					   <input class="input100" type="text" name="keyword" >	
+					   <span class="focus-input100"></span>
+					</div>	
+					
+						<span class="focus-input100"></span>
+				
+					
+				
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Submit Paper
+						</button>
+					</div>
+				
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src= {% static 'vendor/jquery/jquery-3.2.1.min.js' %}></script>
+<!--===============================================================================================-->
+	<script src={% static 'vendor/animsition/js/animsition.min.js' %}></script>
+<!--===============================================================================================-->
+	<script src={% static 'vendor/bootstrap/js/popper.js' %}></script>
+	<script src={% static 'vendor/bootstrap/js/bootstrap.min.js' %}></script>
+<!--===============================================================================================-->
+	<script src={% static 'vendor/select2/select2.min.js' %}></script>
+<!--===============================================================================================-->
+	<script src={% static 'vendor/daterangepicker/moment.min.js' %}></script>
+	<script src={% static 'vendor/daterangepicker/daterangepicker.js' %}></script>
+<!--===============================================================================================-->
+	<script src={% static 'vendor/countdowntime/countdowntime.js' %}></script>
+<!--===============================================================================================-->
+	<script src={% static 'js/main.js' %}></script>
+
+</body>
+</html>
+
+    
